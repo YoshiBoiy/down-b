@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Down-B</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/styles.css" />
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.164.1/build/three.module.js",
+          "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.164.1/examples/jsm/"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <main>
+      <section class="stage">
+        <video id="camera" autoplay playsinline muted></video>
+        <div id="scene" aria-label="Down-B webcam 3D mesh visualization"></div>
+        <div class="camera-status" id="cameraStatus">Starting camera...</div>
+      </section>
+      <aside class="panel">
+        <h1>Down-B</h1>
+        <button id="startCamera" type="button">Start Camera</button>
+        <label class="control-label" for="avatarSelect">Avatar</label>
+        <select id="avatarSelect"></select>
+        <label class="upload-button" for="avatarUpload">Upload 3D Model</label>
+        <input id="avatarUpload" type="file" accept=".glb,.gltf,model/gltf-binary,model/gltf+json" />
+        <label class="toggle-row">
+          <input id="animateUploaded" type="checkbox" checked />
+          <span>Animate uploaded rig</span>
+        </label>
+        <p class="upload-status" id="uploadStatus"></p>
+        <dl>
+          <dt>Player</dt><dd id="playerAction">neutral</dd>
+          <dt>Opponent</dt><dd id="opponentAction">wait</dd>
+          <dt>Exchange</dt><dd id="exchange">miss</dd>
+          <dt>Score</dt><dd id="score">0 - 0</dd>
+          <dt>Confidence</dt><dd id="confidence">0.00</dd>
+        </dl>
+        <p id="reason"></p>
+        <p id="adaptation"></p>
+      </aside>
+    </main>
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>

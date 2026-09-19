@@ -1,0 +1,6 @@
+min_confident_samples: 5
+guard_drop_rate_threshold: 0.6
+base_jab_probability: 0.35
+base_cross_probability: 0.25
+adapted_counter_probability: 0.7
+punch_reach_m: 1.15

@@ -1,0 +1,7 @@
+fx: 710.0
+fy: 710.0
+cx: 320.0
+cy: 272.0
+baseline_m: 0.075
+min_disparity_px: 1.0
+max_pair_delta_ns: 8000000

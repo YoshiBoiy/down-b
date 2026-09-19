@@ -1,0 +1,9 @@
+min_pose_confidence: 0.45
+min_joint_confidence: 0.35
+high_guard_distance: 0.28
+punch_speed_mps: 1.6
+punch_extension: 0.82
+slip_distance_m: 0.18
+duck_distance_m: 0.16
+step_distance_m: 0.18
+max_joint_speed_mps: 8.0

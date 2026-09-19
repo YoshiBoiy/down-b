@@ -1,0 +1,24 @@
+[project]
+name = "down-b"
+version = "0.1.0"
+description = "Adaptive virtual boxing opponent for RDK X5 stereo pose tracking."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "numpy>=1.24",
+  "PyYAML>=6.0",
+  "websockets>=12.0",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0",
+]
+
+[project.scripts]
+down-b-sim = "down_b.main:main"
+down-b-webcam = "down_b.webcam_server:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
